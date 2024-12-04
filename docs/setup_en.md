@@ -1,3 +1,15 @@
+# User System Overview
+CSGHub platform implement user login authorization through docking with Casdoor. Casdoor itself has the ability of single sign-on and third-party login, so users can configure and integrate it easily.
+
+## How to Integrate
+The user service in csghub-server can integrate Casdoor by setting the following environment variable:
+STARHUB_SERVER_CASDOOR_CLIENT_ID: ${STARHUB_SERVER_CASDOOR_CLIENT_ID}
+STARHUB_SERVER_CASDOOR_CLIENT_SECRET: ${STARHUB_SERVER_CASDOOR_CLIENT_SECRET}
+STARHUB_SERVER_CASDOOR_ENDPOINT: ${STARHUB_SERVER_CASDOOR_ENDPOINT}
+STARHUB_SERVER_CASDOOR_CERTIFICATE: <casdoor_stg_cert-token_jwt_key.pem>
+STARHUB_SERVER_CASDOOR_ORGANIZATION_NAME: ${STARHUB_SERVER_CASDOOR_ORGANIZATION_NAME}
+STARHUB_SERVER_CASDOOR_APPLICATION_NAME: ${STARHUB_SERVER_CASDOOR_APPLICATION_NAME}
+
 ### General Environment Variables
 
 - **RAILS_MASTER_KEY**  
